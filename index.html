@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Prototype local V-SAT Student Website - Public + Student Portal"
+    />
+    <title>Cổng đăng ký dự thi</title>
+    <link rel="icon" type="image/png" href="assets/brand/jedu-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="public-header" id="publicHeader">
+        <div class="container header-inner">
+          <button
+            class="brand"
+            data-public-view="home"
+            aria-label="Về trang chủ"
+          >
+            <img
+              class="brand-logo"
+              src="assets/brand/hvnh-logo.png"
+              alt="Học viện Ngân hàng"
+            />
+          </button>
+
+          <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Mở menu"
+          >
+            ☰
+          </button>
+
+          <nav class="public-nav" id="publicNav" aria-label="Điều hướng chính">
+            <button data-public-view="home" class="nav-link active">
+              Trang chủ
+            </button>
+            <button data-public-view="exam" class="nav-link">
+              Kỳ thi V-SAT
+            </button>
+            <button data-public-view="locations" class="nav-link">
+              Địa điểm thi
+            </button>
+            <button data-public-view="guide" class="nav-link">Hướng dẫn</button>
+            <button data-public-view="contact" class="nav-link">Liên hệ</button>
+            <a
+              class="nav-link external-link"
+              href="https://jedu.vn/exams"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Thi thử V-SAT ↗</a
+            >
+          </nav>
+
+          <div class="header-actions">
+            <button class="btn btn-gold" data-open-modal="registerModal">
+              Đăng ký
+            </button>
+            <button class="btn btn-primary" data-open-modal="loginModal">
+              Đăng nhập
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main id="publicApp">
+        <section class="public-view active" data-view="home">
+          <div class="hero">
+            <div class="container hero-grid">
+              <div class="hero-copy">
+                <span class="eyebrow">JEDU · CỔNG ĐĂNG KÝ DỰ THI</span>
+                <h1>Kỳ thi đánh giá đầu vào đại học V-SAT</h1>
+                <p>
+                  Đăng ký tài khoản, hoàn thiện hồ sơ, chọn đợt thi và theo dõi
+                  kết quả trên một hệ thống thống nhất.
+                </p>
+                <div class="hero-actions">
+                  <button
+                    class="btn btn-gold btn-lg"
+                    data-open-modal="registerModal"
+                  >
+                    Đăng ký dự thi
+                  </button>
+                  <button class="btn btn-light btn-lg" data-public-view="guide">
+                    Xem hướng dẫn
+                  </button>
+                </div>
+                <div class="hero-meta">
+                  <span>✓ Tối thiểu 3 môn</span>
+                  <span>✓ Giữ chỗ 96 giờ</span>
+                  <span>✓ Thanh toán VietQR</span>
+                </div>
+              </div>
+              <div class="hero-panel">
+                <div class="hero-panel-top">
+                  <span class="status-dot"></span>
+                  <strong>Đợt đăng ký đang mở</strong>
+                </div>
+                <div class="hero-round">
+                  <span>Đợt 1 · Hà Nội</span>
+                  <strong>15/03/2027</strong>
+                  <small>Học viện Ngân hàng</small>
+                </div>
+                <div class="capacity-row">
+                  <span>Còn trống</span><strong>800 / 1.000 chỗ</strong>
+                </div>
+                <div class="progress"><span style="width: 20%"></span></div>
+                <button
+                  class="btn btn-primary btn-block"
+                  data-open-modal="loginModal"
+                >
+                  Đăng nhập để đăng ký
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <section class="section section-tight">
+            <div class="container">
+              <div class="section-heading compact-heading">
+                <div>
+                  <span class="eyebrow">CẬP NHẬT</span>
+                  <h2>Thông báo quan trọng</h2>
+                </div>
+                <button class="text-link" data-public-view="guide">
+                  Xem hướng dẫn →
+                </button>
+              </div>
+              <div class="notice-list">
+                <article class="notice-item">
+                  <time>11/09/2026</time>
+                  <div>
+                    <strong>Mở đăng ký kỳ thi V-SAT Đợt 1 năm 2027</strong>
+                    <p>Thí sinh hoàn thiện hồ sơ trước khi chọn đợt thi.</p>
+                  </div>
+                  <span class="tag tag-new">Mới</span>
+                </article>
+                <article class="notice-item">
+                  <time>08/09/2026</time>
+                  <div>
+                    <strong>Kế hoạch tổ chức các đợt thi V-SAT</strong>
+                    <p>Lịch dự kiến tại các điểm thi của đơn vị tổ chức.</p>
+                  </div>
+                  <span>›</span>
+                </article>
+                <article class="notice-item">
+                  <time>01/09/2026</time>
+                  <div>
+                    <strong
+                      >Hướng dẫn chuẩn bị ảnh CCCD và ảnh chân dung</strong
+                    >
+                    <p>Ảnh rõ nét, đủ thông tin và đúng tỷ lệ hiển thị.</p>
+                  </div>
+                  <span>›</span>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section soft-section">
+            <div class="container">
+              <div class="section-heading compact-heading">
+                <div>
+                  <span class="eyebrow">LỊCH THI</span>
+                  <h2>Đợt thi sắp tới</h2>
+                </div>
+                <button class="text-link" data-public-view="exam">
+                  Xem toàn bộ lịch →
+                </button>
+              </div>
+              <div class="round-cards">
+                <article class="round-card">
+                  <span class="tag tag-open">Đang mở</span>
+                  <h3>Đợt 1</h3>
+                  <strong>15/03/2027</strong>
+                  <p>Hà Nội · Học viện Ngân hàng</p>
+                </article>
+                <article class="round-card">
+                  <span class="tag">Sắp mở</span>
+                  <h3>Đợt 2</h3>
+                  <strong>20/04/2027</strong>
+                  <p>Hà Nội · Học viện Ngân hàng</p>
+                </article>
+                <article class="round-card">
+                  <span class="tag">Sắp mở</span>
+                  <h3>Đợt 3</h3>
+                  <strong>18/05/2027</strong>
+                  <p>Hải Phòng · Điểm thi liên kết</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="container">
+              <div class="section-heading compact-heading">
+                <div>
+                  <span class="eyebrow">TRUY CẬP NHANH</span>
+                  <h2>Bạn cần làm gì?</h2>
+                </div>
+              </div>
+              <div class="quick-grid">
+                <button class="quick-card" data-public-view="locations">
+                  <span class="quick-icon">⌖</span>
+                  <div>
+                    <strong>Địa điểm thi</strong
+                    ><small>Tìm điểm thi gần bạn</small>
+                  </div>
+                  <span>→</span>
+                </button>
+                <button class="quick-card" data-public-view="guide">
+                  <span class="quick-icon">?</span>
+                  <div>
+                    <strong>Hướng dẫn</strong
+                    ><small>Đăng ký và thanh toán</small>
+                  </div>
+                  <span>→</span>
+                </button>
+                <a
+                  class="quick-card"
+                  href="https://jedu.vn/exams"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><span class="quick-icon">▶</span>
+                  <div>
+                    <strong>Thi thử V-SAT</strong
+                    ><small>Mở hệ thống thi thử</small>
+                  </div>
+                  <span>↗</span></a
+                >
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="public-view" data-view="exam">
+          <div class="page-hero">
+            <div class="container">
+              <span class="eyebrow">THÔNG TIN KỲ THI</span>
+              <h1>Kỳ thi V-SAT</h1>
+              <p>Thông tin trọng tâm về lịch thi, môn thi và lệ phí.</p>
+            </div>
+          </div>
+          <div class="container section content-narrow">
+            <div class="mini-tabs" data-tab-group="examInfoTabs">
+              <button class="mini-tab active" data-tab="overview">
+                Tổng quan
+              </button>
+              <button class="mini-tab" data-tab="schedule">Lịch thi</button>
+              <button class="mini-tab" data-tab="subjects">Môn thi</button>
+              <button class="mini-tab" data-tab="fees">Lệ phí</button>
+            </div>
+            <div class="tab-panel active" data-tab-panel="overview">
+              <div class="info-card">
+                <h2>Tổng quan</h2>
+                <p>
+                  V-SAT là kỳ thi đánh giá đầu vào đại học do đơn vị tổ chức
+                  triển khai theo kế hoạch từng năm. Thí sinh đăng ký tối thiểu
+                  3 môn và lựa chọn đợt thi phù hợp.
+                </p>
+                <div class="fact-grid">
+                  <div>
+                    <small>Hình thức</small><strong>Thi tập trung</strong>
+                  </div>
+                  <div><small>Đăng ký</small><strong>Trực tuyến</strong></div>
+                  <div><small>Tối thiểu</small><strong>03 môn</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel" data-tab-panel="schedule">
+              <div class="info-card">
+                <h2>Lịch thi dự kiến</h2>
+                <div class="simple-table">
+                  <div class="table-row table-head">
+                    <span>Đợt</span><span>Ngày thi</span><span>Đăng ký</span
+                    ><span>Trạng thái</span>
+                  </div>
+                  <div class="table-row">
+                    <span>Đợt 1</span><span>15/03/2027</span
+                    ><span>01/02–11/03</span
+                    ><span class="tag tag-open">Đang mở</span>
+                  </div>
+                  <div class="table-row">
+                    <span>Đợt 2</span><span>20/04/2027</span
+                    ><span>15/03–16/04</span><span class="tag">Sắp mở</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel" data-tab-panel="subjects">
+              <div class="info-card">
+                <h2>Môn thi</h2>
+                <div class="subject-chip-list">
+                  <span>Toán</span><span>Ngữ văn</span><span>Tiếng Anh</span
+                  ><span>Vật lý</span><span>Hóa học</span><span>Sinh học</span
+                  ><span>Lịch sử</span><span>Địa lý</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel" data-tab-panel="fees">
+              <div class="info-card">
+                <h2>Lệ phí</h2>
+                <div class="fee-highlight">
+                  <small>Lệ phí minh họa / môn</small
+                  ><strong>200.000 VNĐ</strong>
+                </div>
+                <p>
+                  Thí sinh thanh toán từng hóa đơn riêng. Khoản đã thanh toán
+                  không hoàn lại theo quy định.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="public-view" data-view="locations">
+          <div class="page-hero">
+            <div class="container">
+              <span class="eyebrow">ĐỊA ĐIỂM</span>
+              <h1>Địa điểm thi</h1>
+              <p>Tìm nhanh điểm thi và địa chỉ tổ chức.</p>
+            </div>
+          </div>
+          <div class="container section content-narrow">
+            <div class="toolbar">
+              <label
+                >Tỉnh / Thành phố<select id="locationFilter">
+                  <option value="all">Tất cả</option>
+                  <option value="hn">Hà Nội</option>
+                  <option value="hp">Hải Phòng</option>
+                </select></label
+              >
+            </div>
+            <div class="location-list" id="locationList">
+              <article class="location-card" data-city="hn">
+                <div>
+                  <span class="tag tag-open">Hà Nội</span>
+                  <h3>Học viện Ngân hàng</h3>
+                  <p>12 Chùa Bộc, Đống Đa, Hà Nội</p>
+                </div>
+                <button class="btn btn-light">Xem bản đồ</button>
+              </article>
+              <article class="location-card" data-city="hn">
+                <div>
+                  <span class="tag">Hà Nội</span>
+                  <h3>Điểm thi Cầu Giấy</h3>
+                  <p>Khu vực Cầu Giấy, Hà Nội</p>
+                </div>
+                <button class="btn btn-light">Xem bản đồ</button>
+              </article>
+              <article class="location-card" data-city="hp">
+                <div>
+                  <span class="tag">Hải Phòng</span>
+                  <h3>Điểm thi Hải Phòng</h3>
+                  <p>Quận Lê Chân, Hải Phòng</p>
+                </div>
+                <button class="btn btn-light">Xem bản đồ</button>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="public-view" data-view="guide">
+          <div class="page-hero">
+            <div class="container">
+              <span class="eyebrow">HỖ TRỢ</span>
+              <h1>Hướng dẫn</h1>
+              <p>Chọn đúng nội dung bạn cần, không phải đọc một bài dài.</p>
+            </div>
+          </div>
+          <div class="container section content-narrow">
+            <div class="accordion" id="guideAccordion">
+              <details open>
+                <summary><span>01</span> Đăng ký tài khoản</summary>
+                <div class="details-body">
+                  <ol>
+                    <li>Chọn <b>Đăng ký</b> trên Header.</li>
+                    <li>Nhập CCCD, số điện thoại, Email và mật khẩu.</li>
+                    <li>Mở Email và bấm link xác thực.</li>
+                    <li>Quay lại hệ thống để đăng nhập.</li>
+                  </ol>
+                </div>
+              </details>
+              <details>
+                <summary><span>02</span> Hoàn thiện hồ sơ</summary>
+                <div class="details-body">
+                  <ol>
+                    <li>Upload ảnh chân dung và hai mặt CCCD.</li>
+                    <li>Kiểm tra thông tin đọc từ QR.</li>
+                    <li>Điền địa chỉ và thông tin THPT.</li>
+                    <li>Nhấn Lưu và xác nhận OTP Email.</li>
+                  </ol>
+                </div>
+              </details>
+              <details>
+                <summary><span>03</span> Đăng ký thi</summary>
+                <div class="details-body">
+                  <ol>
+                    <li>Chọn Điểm thi.</li>
+                    <li>Mở Đợt thi còn chỗ.</li>
+                    <li>Chọn tối thiểu 3 môn.</li>
+                    <li>Xác nhận đăng ký và thanh toán trong 96 giờ.</li>
+                  </ol>
+                </div>
+              </details>
+              <details>
+                <summary><span>04</span> Thanh toán</summary>
+                <div class="details-body">
+                  <ol>
+                    <li>Mở module Thanh toán.</li>
+                    <li>Chọn một hóa đơn chưa thanh toán.</li>
+                    <li>Quét VietQR và chuyển đúng số tiền.</li>
+                    <li>Chờ hệ thống xác nhận tự động.</li>
+                  </ol>
+                </div>
+              </details>
+              <details>
+                <summary><span>05</span> Kết quả & Phiếu xác nhận</summary>
+                <div class="details-body">
+                  <ol>
+                    <li>Mở module Kết quả thi.</li>
+                    <li>Xem SBD, điểm môn và mã vận đơn.</li>
+                    <li>Chọn Xem phiếu hoặc In/Lưu PDF.</li>
+                  </ol>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section class="public-view" data-view="contact">
+          <div class="page-hero">
+            <div class="container">
+              <span class="eyebrow">HỖ TRỢ THÍ SINH</span>
+              <h1>Liên hệ</h1>
+              <p>Các kênh hỗ trợ chính thức của đơn vị tổ chức.</p>
+            </div>
+          </div>
+          <div class="container section content-narrow">
+            <div class="contact-grid">
+              <div class="contact-card">
+                <small>Đơn vị tổ chức</small><strong>Học viện Ngân hàng</strong>
+                <p>12 Chùa Bộc, Đống Đa, Hà Nội</p>
+              </div>
+              <div class="contact-card">
+                <small>Hotline</small><strong>1900 0000</strong>
+                <p>08:00–17:00, Thứ 2–Thứ 6</p>
+              </div>
+              <div class="contact-card">
+                <small>Email</small><strong>vsat@school.edu.vn</strong>
+                <p>Hỗ trợ tài khoản và kỳ thi</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer" aria-label="Thông tin bản quyền">
+          <div class="container site-footer-inner">
+            <span>Powered by <strong>JEDU</strong>.</span>
+            <span>©2026 JEDU. All rights reserved.</span>
+          </div>
+        </footer>
+      </main>
+
+      <div id="studentApp" class="student-shell hidden">
+        <aside class="student-sidebar" id="studentSidebar">
+          <div class="sidebar-brand">
+            <img
+              class="sidebar-logo"
+              src="assets/brand/hvnh-logo.png"
+              alt="JEDU"
+            />
+          </div>
+          <nav class="student-nav">
+            <button class="student-nav-item active" data-student-view="profile">
+              <span>01</span> Thông tin thí sinh
+            </button>
+            <button class="student-nav-item" data-student-view="registration">
+              <span>02</span> Đăng ký thi
+            </button>
+            <button class="student-nav-item" data-student-view="payment">
+              <span>03</span> Thanh toán
+              <b class="nav-badge" id="unpaidBadge">2</b>
+            </button>
+            <button class="student-nav-item" data-student-view="results">
+              <span>04</span> Kết quả thi
+            </button>
+            <button class="student-nav-item" data-student-view="notifications">
+              <span>05</span> Thông báo
+              <b class="nav-badge" id="noticeBadge">3</b>
+            </button>
+            <button class="student-nav-item" data-student-view="account">
+              <span>06</span> Tài khoản
+            </button>
+          </nav>
+          <div class="sidebar-footer">
+            <small>Tenant</small><strong>Học viện Ngân hàng</strong>
+          </div>
+        </aside>
+
+        <div class="student-main">
+          <header class="student-topbar">
+            <div class="student-topbar-left">
+              <button class="portal-menu-btn" id="portalMenuBtn">☰</button>
+              <div>
+                <small>Cổng thí sinh</small
+                ><strong id="studentPageTitle">Thông tin thí sinh</strong>
+              </div>
+            </div>
+            <div class="student-user">
+              <button
+                class="icon-btn"
+                data-student-view="notifications"
+                aria-label="Thông báo"
+              >
+                🔔<span class="dot-badge">3</span>
+              </button>
+              <div class="avatar">NA</div>
+              <div class="user-copy">
+                <strong>Nguyễn Văn An</strong><small>001204012345</small>
+              </div>
+            </div>
+          </header>
+
+          <main class="portal-content">
+            <section class="student-view active" data-student-section="profile">
+              <div class="portal-page-head">
+                <div>
+                  <span class="eyebrow">HỒ SƠ</span>
+                  <h1>Thông tin thí sinh</h1>
+                  <p>Thông tin hồ sơ dùng chung cho các đăng ký dự thi.</p>
+                </div>
+                <span class="status-pill locked" id="profileStatusPill"
+                  >🔒 Đã khóa sau thanh toán</span
+                >
+              </div>
+              <form id="profileForm" class="profile-form">
+                <section class="portal-card form-section">
+                  <div class="card-head">
+                    <div>
+                      <span class="section-number">I</span>
+                      <h2>Thông tin cá nhân</h2>
+                    </div>
+                    <small>Thông tin từ CCCD là read-only</small>
+                  </div>
+                  <div class="upload-grid">
+                    <div class="upload-box">
+                      <div class="portrait-placeholder">NA</div>
+                      <strong>Ảnh chân dung</strong
+                      ><small>Tỷ lệ 3:4 · rõ khuôn mặt</small
+                      ><button type="button" class="text-link">Xem ảnh</button>
+                    </div>
+                    <div class="upload-box id-card-placeholder">
+                      <span>MẶT TRƯỚC</span><strong>CCCD</strong
+                      ><small>QR đã đọc thành công</small
+                      ><button type="button" class="text-link">Xem ảnh</button>
+                    </div>
+                    <div class="upload-box id-card-placeholder">
+                      <span>MẶT SAU</span><strong>CCCD</strong
+                      ><small>Ảnh rõ, đủ 4 góc</small
+                      ><button type="button" class="text-link">Xem ảnh</button>
+                    </div>
+                  </div>
+                  <div class="form-grid cols-3">
+                    <label>Họ tên<input value="Nguyễn Văn An" readonly /></label
+                    ><label>Giới tính<input value="Nam" readonly /></label
+                    ><label
+                      >Ngày sinh<input value="12/04/2006" readonly /></label
+                    ><label
+                      >Số CCCD<input value="001204012345" readonly /></label
+                    ><label
+                      >Ngày cấp<input value="20/05/2024" readonly
+                    /></label>
+                  </div>
+                </section>
+
+                <section class="portal-card form-section">
+                  <div class="card-head">
+                    <div>
+                      <span class="section-number">II</span>
+                      <h2>Địa chỉ thường trú</h2>
+                    </div>
+                  </div>
+                  <div class="form-grid cols-3">
+                    <label
+                      >Tỉnh/Thành phố<select name="permanentProvince" disabled>
+                        <option>Hà Nội</option>
+                      </select></label
+                    ><label
+                      >Phường/Xã<select name="permanentWard" disabled>
+                        <option>Phường Kim Liên</option>
+                      </select></label
+                    ><label class="span-full"
+                      >Địa chỉ chi tiết<input
+                        name="permanentAddress"
+                        value="Số 18, phố Chùa Bộc, Đống Đa"
+                        disabled
+                    /></label>
+                  </div>
+                </section>
+
+                <section class="portal-card form-section">
+                  <div class="card-head">
+                    <div>
+                      <span class="section-number">III</span>
+                      <h2>Địa chỉ nhận giấy báo</h2>
+                    </div>
+                    <label class="inline-check"
+                      ><input type="checkbox" checked disabled /> Người nhận là
+                      thí sinh</label
+                    >
+                  </div>
+                  <div class="form-grid cols-3">
+                    <label
+                      >Tên người nhận<input
+                        name="recipientName"
+                        value="Nguyễn Văn An"
+                        disabled /></label
+                    ><label
+                      >Số điện thoại<input
+                        name="recipientPhone"
+                        value="0988123456"
+                        disabled /></label
+                    ><label class="inline-check align-end"
+                      ><input type="checkbox" checked disabled /> Dùng địa chỉ
+                      thường trú</label
+                    ><label
+                      >Tỉnh/Thành phố<select name="recipientProvince" disabled>
+                        <option>Hà Nội</option>
+                      </select></label
+                    ><label
+                      >Phường/Xã<select name="recipientWard" disabled>
+                        <option>Phường Kim Liên</option>
+                      </select></label
+                    ><label
+                      >Địa chỉ chi tiết<input
+                        name="recipientAddress"
+                        value="Số 18, phố Chùa Bộc, Đống Đa"
+                        disabled
+                    /></label>
+                  </div>
+                </section>
+
+                <section class="portal-card form-section">
+                  <div class="card-head">
+                    <div>
+                      <span class="section-number">IV</span>
+                      <h2>Thông tin THPT</h2>
+                    </div>
+                  </div>
+                  <div class="form-grid cols-4">
+                    <label
+                      >Tỉnh/Thành phố<select name="schoolProvince" disabled>
+                        <option>Hà Nội</option>
+                      </select></label
+                    ><label class="span-2"
+                      >Trường THPT<select name="highSchool" disabled>
+                        <option>THPT Kim Liên</option>
+                      </select></label
+                    ><label
+                      >Năm tốt nghiệp<select name="graduationYear" disabled>
+                        <option>2024</option>
+                      </select></label
+                    ><label
+                      >Khu vực ưu tiên<select name="priorityArea" disabled>
+                        <option>KV3</option>
+                      </select></label
+                    >
+                  </div>
+                </section>
+
+                <div class="sticky-form-actions">
+                  <button
+                    type="button"
+                    class="btn btn-light hidden"
+                    id="profileCancelBtn"
+                  >
+                    Hủy</button
+                  ><button
+                    type="button"
+                    class="btn btn-primary"
+                    id="profileEditBtn"
+                  >
+                    Chỉnh sửa hồ sơ</button
+                  ><button
+                    type="submit"
+                    class="btn btn-primary hidden"
+                    id="profileSaveBtn"
+                  >
+                    Lưu thay đổi
+                  </button>
+                </div>
+              </form>
+            </section>
+
+            <section class="student-view" data-student-section="registration">
+              <div class="portal-page-head">
+                <div>
+                  <span class="eyebrow">KỲ THI</span>
+                  <h1>Đăng ký thi</h1>
+                  <p>
+                    Chọn điểm thi, mở đợt thi và thực hiện action ngay tại đây.
+                  </p>
+                </div>
+                <div class="info-badge">Tối thiểu 3 môn / đăng ký</div>
+              </div>
+              <div id="registrationSites" class="exam-sites"></div>
+            </section>
+
+            <section class="student-view" data-student-section="payment">
+              <div class="portal-page-head">
+                <div>
+                  <span class="eyebrow">HÓA ĐƠN</span>
+                  <h1>Thanh toán</h1>
+                  <p>
+                    Các khoản chưa thanh toán được ưu tiên hiển thị phía trên.
+                  </p>
+                </div>
+                <div class="info-badge">1 hóa đơn → 1 VietQR</div>
+              </div>
+              <div id="invoiceList" class="invoice-list"></div>
+            </section>
+
+            <section class="student-view" data-student-section="results">
+              <div class="portal-page-head">
+                <div>
+                  <span class="eyebrow">SAU KỲ THI</span>
+                  <h1>Kết quả thi</h1>
+                  <p>Điểm thi, SBD, điểm từng môn và phiếu xác nhận.</p>
+                </div>
+              </div>
+              <section class="portal-card candidate-summary">
+                <div><small>Họ tên</small><strong>Nguyễn Văn An</strong></div>
+                <div><small>Số CCCD</small><strong>001204012345</strong></div>
+                <div><small>Ngày sinh</small><strong>12/04/2006</strong></div>
+              </section>
+              <section class="portal-card result-card">
+                <div class="result-table-wrap">
+                  <table class="result-table">
+                    <thead>
+                      <tr>
+                        <th class="sticky-left">Đợt thi - Điểm thi</th>
+                        <th>SBD</th>
+                        <th>Toán</th>
+                        <th>Ngữ văn</th>
+                        <th>Tiếng Anh</th>
+                        <th>Vật lý</th>
+                        <th>Hóa học</th>
+                        <th>Sinh học</th>
+                        <th>Mã vận đơn</th>
+                        <th class="sticky-right">Thao tác</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="sticky-left">
+                          <strong>Đợt 2</strong
+                          ><small>Học viện Ngân hàng · Hà Nội</small>
+                        </td>
+                        <td>VS240128</td>
+                        <td><b>8.50</b></td>
+                        <td><b>7.75</b></td>
+                        <td><b>9.00</b></td>
+                        <td><b>8.25</b></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="shipment-code">VN123456789</span></td>
+                        <td class="sticky-right action-cell">
+                          <button class="btn btn-light btn-sm" id="viewSlipBtn">
+                            Xem phiếu</button
+                          ><button class="text-link" id="printSlipBtn">
+                            In / Lưu PDF
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="table-hint">
+                  ← Kéo ngang vùng điểm môn để xem toàn bộ môn School cấu hình →
+                </p>
+              </section>
+            </section>
+
+            <section class="student-view" data-student-section="notifications">
+              <div class="portal-page-head">
+                <div>
+                  <span class="eyebrow">CẬP NHẬT</span>
+                  <h1>Thông báo</h1>
+                  <p>Thông báo từ đơn vị tổ chức và từ hệ thống.</p>
+                </div>
+              </div>
+              <div class="mini-tabs notification-tabs">
+                <button class="mini-tab active" data-notice-tab="school">
+                  Đơn vị tổ chức thi</button
+                ><button class="mini-tab" data-notice-tab="system">
+                  Hệ thống
+                </button>
+              </div>
+              <div id="notificationList" class="notification-list"></div>
+            </section>
+
+            <section class="student-view" data-student-section="account">
+              <div class="portal-page-head">
+                <div>
+                  <span class="eyebrow">TÀI KHOẢN</span>
+                  <h1>Tài khoản</h1>
+                  <p>Quản lý thông tin chung và thông tin đăng nhập.</p>
+                </div>
+              </div>
+              <div class="portal-card account-card">
+                <div class="mini-tabs account-tabs">
+                  <button class="mini-tab active" data-account-tab="general">
+                    Thông tin chung</button
+                  ><button class="mini-tab" data-account-tab="password">
+                    Đổi mật khẩu</button
+                  ><button class="mini-tab" data-account-tab="email">
+                    Đổi Email
+                  </button>
+                </div>
+                <div class="account-panel active" data-account-panel="general">
+                  <div class="account-info-grid">
+                    <div>
+                      <small>Họ tên</small><strong>Nguyễn Văn An</strong>
+                    </div>
+                    <div>
+                      <small>Số CCCD</small><strong>001204012345</strong>
+                    </div>
+                    <div>
+                      <small>Email</small
+                      ><strong id="accountEmailText"
+                        >an.nguyen@example.com</strong
+                      >
+                    </div>
+                    <div>
+                      <small>Số điện thoại</small><strong>0988123456</strong>
+                    </div>
+                  </div>
+                  <div class="account-footer">
+                    <button class="btn btn-danger" id="logoutBtn">
+                      Đăng xuất
+                    </button>
+                  </div>
+                </div>
+                <div class="account-panel" data-account-panel="password">
+                  <form id="changePasswordForm" class="compact-form">
+                    <label
+                      >Mật khẩu hiện tại<input
+                        type="password"
+                        required
+                        placeholder="Nhập mật khẩu hiện tại" /></label
+                    ><label
+                      >Mật khẩu mới<input
+                        type="password"
+                        required
+                        placeholder="Nhập mật khẩu mới" /></label
+                    ><label
+                      >Xác nhận mật khẩu mới<input
+                        type="password"
+                        required
+                        placeholder="Nhập lại mật khẩu mới"
+                    /></label>
+                    <div class="form-actions">
+                      <button type="reset" class="btn btn-light">Hủy</button
+                      ><button type="submit" class="btn btn-primary">
+                        Đổi mật khẩu
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="account-panel" data-account-panel="email">
+                  <form id="changeEmailForm" class="compact-form">
+                    <label
+                      >Email hiện tại<input
+                        id="currentEmailInput"
+                        value="an.nguyen@example.com"
+                        readonly /></label
+                    ><label
+                      >Email mới<input
+                        type="email"
+                        id="newEmailInput"
+                        required
+                        placeholder="name@example.com"
+                    /></label>
+                    <div class="form-note">
+                      Email hiện tại chỉ được thay thế sau khi Email mới xác
+                      thực thành công.
+                    </div>
+                    <div class="form-actions">
+                      <button type="reset" class="btn btn-light">Hủy</button
+                      ><button type="submit" class="btn btn-primary">
+                        Gửi xác thực
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </main>
+          <footer
+            class="site-footer portal-footer"
+            aria-label="Thông tin bản quyền"
+          >
+            <div class="site-footer-inner">
+              <span>Powered by <strong>JEDU</strong>.</span>
+              <span>©2026 JEDU. All rights reserved.</span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+
+    <section class="modal" id="loginModal" aria-hidden="true">
+      <div class="modal-card auth-modal">
+        <button class="modal-close" data-close-modal>×</button>
+        <div class="modal-head">
+          <span class="eyebrow">THÍ SINH</span>
+          <h2>Đăng nhập</h2>
+          <p>Sử dụng số CCCD và mật khẩu đã đăng ký.</p>
+        </div>
+        <form id="loginForm" class="compact-form">
+          <label
+            >Số CCCD<input
+              id="loginCccd"
+              value="001204012345"
+              inputmode="numeric"
+              required /></label
+          ><label
+            >Mật khẩu<input
+              id="loginPassword"
+              type="password"
+              value="Demo@123"
+              required
+          /></label>
+          <div class="auth-row">
+            <label class="inline-check"
+              ><input type="checkbox" checked /> Ghi nhớ đăng nhập</label
+            ><button type="button" class="text-link" id="forgotPasswordLink">
+              Quên mật khẩu?
+            </button>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">
+            Đăng nhập
+          </button>
+          <p class="demo-hint">Demo local: thông tin đã được điền sẵn.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="modal" id="registerModal" aria-hidden="true">
+      <div class="modal-card auth-modal">
+        <button class="modal-close" data-close-modal>×</button>
+        <div class="modal-head">
+          <span class="eyebrow">TÀI KHOẢN MỚI</span>
+          <h2>Đăng ký</h2>
+          <p>Đăng ký trong Tenant Học viện Ngân hàng.</p>
+        </div>
+        <form id="registerForm" class="compact-form">
+          <label
+            >Số CCCD<input
+              required
+              inputmode="numeric"
+              placeholder="12 chữ số" /></label
+          ><label
+            >Số điện thoại<input
+              required
+              inputmode="tel"
+              placeholder="09xxxxxxxx" /></label
+          ><label
+            >Email<input
+              type="email"
+              required
+              placeholder="name@example.com" /></label
+          ><label>Mật khẩu<input type="password" required /></label
+          ><label>Xác nhận mật khẩu<input type="password" required /></label
+          ><button class="btn btn-primary btn-block" type="submit">
+            Đăng ký tài khoản
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="modal" id="forgotModal" aria-hidden="true">
+      <div class="modal-card auth-modal">
+        <button class="modal-close" data-close-modal>×</button>
+        <div class="modal-head">
+          <span class="eyebrow">KHÔI PHỤC</span>
+          <h2>Quên mật khẩu</h2>
+          <p>Nhập CCCD và Email đang gắn với tài khoản.</p>
+        </div>
+        <form id="forgotForm" class="compact-form">
+          <label>Số CCCD<input required value="001204012345" /></label
+          ><label
+            >Email<input
+              type="email"
+              required
+              value="an.nguyen@example.com" /></label
+          ><button class="btn btn-primary btn-block" type="submit">
+            Gửi OTP
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="modal" id="otpModal" aria-hidden="true">
+      <div class="modal-card small-modal">
+        <button class="modal-close" data-close-modal>×</button>
+        <div class="modal-head">
+          <span class="eyebrow">XÁC THỰC</span>
+          <h2>Nhập mã OTP</h2>
+          <p>Mã demo: <b>123456</b></p>
+        </div>
+        <form id="otpForm" class="compact-form">
+          <input type="hidden" id="otpContext" /><label
+            >Mã OTP<input
+              id="otpInput"
+              inputmode="numeric"
+              maxlength="6"
+              required
+              placeholder="••••••"
+          /></label>
+          <div class="otp-resend">
+            <span id="otpCountdown">Gửi lại sau 30s</span
+            ><button type="button" class="text-link" id="resendOtpBtn" disabled>
+              Gửi lại OTP
+            </button>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">
+            Xác nhận
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="modal" id="resetPasswordModal" aria-hidden="true">
+      <div class="modal-card auth-modal">
+        <button class="modal-close" data-close-modal>×</button>
+        <div class="modal-head">
+          <span class="eyebrow">ĐẶT LẠI MẬT KHẨU</span>
+          <h2>Tạo mật khẩu mới</h2>
+          <p>OTP đã được xác thực. Hãy nhập mật khẩu mới.</p>
+        </div>
+        <form id="resetPasswordForm" class="compact-form">
+          <label
+            >Mật khẩu mới<input
+              type="password"
+              id="resetNewPassword"
+              required
+              placeholder="Nhập mật khẩu mới" /></label
+          ><label
+            >Xác nhận mật khẩu mới<input
+              type="password"
+              id="resetConfirmPassword"
+              required
+              placeholder="Nhập lại mật khẩu mới" /></label
+          ><button class="btn btn-primary btn-block" type="submit">
+            Đặt lại mật khẩu
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="modal" id="emailVerifyModal" aria-hidden="true">
+      <div class="modal-card auth-modal">
+        <button class="modal-close" data-close-modal>×</button>
+        <div class="modal-head">
+          <span class="eyebrow">XÁC THỰC EMAIL</span>
+          <h2>Kiểm tra Email mới</h2>
+          <p id="emailVerifyText">Hệ thống đã gửi link xác thực.</p>
+        </div>
+        <div class="form-note">
+          Trong hệ thống thật, thí sinh mở Email và bấm link xác thực. Ở
+          prototype local, dùng nút bên dưới để mô phỏng.
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-light" data-close-modal>Để sau</button
+          ><button class="btn btn-primary" id="simulateEmailVerifyBtn">
+            Mô phỏng mở link xác thực
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal" id="actionModal" aria-hidden="true">
+      <div class="modal-card" id="actionModalCard">
+        <button class="modal-close" data-close-modal>×</button>
+        <div id="actionModalContent"></div>
+      </div>
+    </section>
+
+    <section class="modal" id="paymentModal" aria-hidden="true">
+      <div class="modal-card payment-modal">
+        <button class="modal-close" data-close-modal>×</button>
+        <div id="paymentModalContent"></div>
+      </div>
+    </section>
+
+    <section class="modal" id="notificationModal" aria-hidden="true">
+      <div class="modal-card">
+        <button class="modal-close" data-close-modal>×</button>
+        <div id="notificationModalContent"></div>
+      </div>
+    </section>
+
+    <section class="modal" id="slipModal" aria-hidden="true">
+      <div class="modal-card slip-modal-card">
+        <button class="modal-close" data-close-modal>×</button>
+        <div id="printableSlip" class="exam-slip">
+          <div class="slip-top">
+            <img
+              class="slip-logo-img"
+              src="assets/brand/jedu-icon.png"
+              alt="JEDU"
+            />
+            <div>
+              <small>HỌC VIỆN NGÂN HÀNG</small>
+              <h2>PHIẾU XÁC NHẬN ĐĂNG KÝ DỰ THI</h2>
+            </div>
+          </div>
+          <div class="slip-grid">
+            <div><small>Họ tên</small><strong>Nguyễn Văn An</strong></div>
+            <div><small>Số CCCD</small><strong>001204012345</strong></div>
+            <div><small>Ngày sinh</small><strong>12/04/2006</strong></div>
+            <div><small>Đợt thi</small><strong>Đợt 2</strong></div>
+            <div>
+              <small>Điểm thi</small><strong>Học viện Ngân hàng</strong>
+            </div>
+            <div><small>Ngày thi</small><strong>20/04/2027</strong></div>
+            <div><small>SBD</small><strong>VS240128</strong></div>
+            <div><small>Phòng thi</small><strong>P.305</strong></div>
+            <div><small>Ca thi</small><strong>Ca 2</strong></div>
+          </div>
+          <div class="slip-subjects">
+            <small>Môn đăng ký</small>
+            <p>Toán · Ngữ văn · Tiếng Anh · Vật lý</p>
+          </div>
+          <div class="slip-note">
+            Thông tin trên phiếu được tạo theo dữ liệu mới nhất tại thời điểm
+            xem/in.
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-light" data-close-modal>Đóng</button
+          ><button class="btn btn-primary" id="printSlipModalBtn">
+            In / Lưu PDF
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
